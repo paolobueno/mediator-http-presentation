@@ -1,4 +1,4 @@
-# Mediator topics over HTTP
+# Topics over HTTP
 ## Automatic mirrorring of topics over network transport
 
 ---
@@ -17,8 +17,8 @@
 ---
 
 
-# Current
-## Client
+### Current
+# Client
 
 *lib/angular/user/user-controller.js*
 
@@ -33,8 +33,8 @@ mediator.subscribe('done:wfm:user:create', function() {
 
 ----
 
-# Current
-## Client
+### Current
+# Client
 
 *lib/angular/services/user-client-service.js*
 
@@ -52,8 +52,8 @@ mediator.subscribe('wfm:user:create', function(userToCreate) {
 
 ----
 
-# Current
-## Server
+### Current
+# Server
 
 *lib/server/router.js*
 
@@ -75,8 +75,8 @@ userRoute.post(function(req, res) {
 
 ----
 
-# Current
-## Server
+### Current
+# Server
 
 *lib/server/userStore.js*
 
@@ -94,8 +94,8 @@ mediator.subscribe('wfm:user:create', function(userToCreate) {
 
 ---
 
-# New
-## Client
+### New
+# Client
 
 ```javascript
 mediator.mirror('wfm:user:create', {
@@ -111,8 +111,8 @@ mediator.subscribe('done:wfm:user:create', function() {
 
 ----
 
-# New
-## Server
+### New
+# Server
 
 ```javascript
 app.use('topics', mediator.mirrorMiddleware);
@@ -122,8 +122,6 @@ mediator.subscribe('wfm:user:create', function(userToCreate) {
   store.create(user,
     mediator.callbackForTopic('wfm:user:create'));
 });
-
-mediator.publish('wfm:user:create', $scope.newUser);
 ```
 
 ---

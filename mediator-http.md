@@ -145,7 +145,7 @@ mediator.mirror('wfm:user:create', {
 
 ----
 
-# Globally configurable
+## Globally configurable
 
 ```javascript
 mediator.config({

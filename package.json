@@ -1,0 +1,22 @@
+{
+  "name": "mediator-http-presentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "reveal-md mediator-http.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paolobueno/mediator-http-presentation.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paolobueno/mediator-http-presentation/issues"
+  },
+  "homepage": "https://github.com/paolobueno/mediator-http-presentation#readme",
+  "dependencies": {
+    "reveal-md": "0.0.32"
+  }
+}
